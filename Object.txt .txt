@@ -1,0 +1,10 @@
+var character = {
+  characterName: "Hector",
+  videoGame: "Fire Emblem",
+  age: 20,
+ class: "Lord",
+  weaponName: "Wolf Beil"
+ 
+};
+ 
+  console.log(character);
