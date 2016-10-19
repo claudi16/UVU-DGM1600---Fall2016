@@ -1,0 +1,390 @@
+<html>
+    <p> Ride </p>
+<script>
+              
+              
+            //Confirming name
+var name = prompt("What is your name?");
+var namCon = confirm("Is "+name+ " your name?");
+var age = prompt("What is your age?");
+
+while((age<=0) || (age>=100)){
+var ageCon = confirm("Are you "+age+" years old?");
+}
+
+var character = ["Name: " +name,"Age: " +age];
+var characterCon = confirm("Is this correct?\n"+character.join('\n'));
+if(characterCon){
+  scene_movie();
+}else{}
+         
+               //start of the game!!
+function scene_movie(){
+  alert("The familiar sound of a text notification sounds off in your small, dark room"+
+       " and you reach out to grab your phone.")
+  alert("Taylor:\n \'hey, we\'re outside, "+name+"! hurry up!\'")
+  alert("Grabbing your shoes you silently sneak out into the night to meet your friends.");
+  alert("\"Get in loser, we're going shopping\", Lyn giggles from the shotgun of Taylor's car."+
+       " The three of you had planned to see a late night movie. Unfortunately, your parent's "+
+       "untimely grounding put a damper on the plans. Fortunately, none of you were novices in "+
+       "the art of sneaking out.")
+  alert("You step into Taylor's car and the three of you drive off into the night.");
+  alert("\"Man, this fog sucks,\" Taylor groans, turning on his blinders in desparation.");
+  car();
+}
+                //car function
+function car(){
+    var stop = prompt("Suggest to stop the car or continue driving.", "stop or continue?");
+
+  
+              //Functions to stop or continue driving
+  function stopDrive(){
+    alert("You suggest to stay put until the fog rolls around; the current conditons were far too dangerous");
+    alert("\"I guess a movie isn't worth our lives,\" Taylor sighs as he pulls to the side of the road.")
+  train();
+  }
+  function continueDrive(){
+    alert("You really don\'t want to be late for the movie showing and suggest Taylor continue driving.")
+    alert("Suddenly you hear the sceech of tires and a blinding pair of headlights appear before"+
+         " there's a sickening jolt. The pain lasts only a moment until you black out entirely.");
+    alert("Ending: LA Devotee")//ENDING LA DEVOTEE
+    alert("You died.")
+  }
+    
+  if(stop=="stop"){
+    stopDrive();
+  }else if(stop=="continue"){
+    continueDrive();
+    }else{
+      alert("\"stop\" or \"continue\"?");
+      car();
+    }
+}
+               //train
+
+function train(){
+  alert("\"Hey, is something...I dunno, off?\" Lyn questions hesitantly.");
+  alert("The fog is too thick to even see a couple feet out. Suddenly you hear the distant sound of...a train?");
+  alert("The three of you look at each other in question and silently agree to step out of the vehicle.");
+  alert("Taylor moves ahead of the group, urging the two of you to stay behind, against Lyn's protest."+
+       " After a minute or so he frantically calls out to you both.")
+  alert("Blindly following the sound of Taylor's voice through the fog, the two of you see"+
+       " what he was screaming about. A train had mysteriously appeared, disregarding the fact that"+
+       " there was not a train track within 50 miles. Yet, unmistakably, there was a working train right"+
+       " before the three of you. The doors creak open, inviting you in.")
+  alert("\"Should we go in?\" Leave it to Taylor to ask the questions on everyone's mind.");
+  rideTrain();
+  
+  function rideTrain(){
+    
+    var rideonTrain = prompt("Enter the train?", "yes or no");
+  if(rideonTrain=="yes"){
+    alert("Your curiosity is overwhelming and the three of you agree to get on together.");
+    alert("The train doors shut tight behind you and you feel its wheels begin to roll away.");
+    conductor();
+  }else if(rideonTrain=="no"){
+    alert("As you voice your protest to mounting the train, Taylor and Lyn side with you. The three of you"+
+         " agree to go back to the car...wherever it was. The train begins to pull away and you realize"+
+         " the fog has robbed you of any sense of direction.");
+    alert("The following morning a report is sent out for three missing teens who had mysteriously vanished into thin air.")
+    alert("Ending: I Wanna be Free")//ENDING I WANNA BE FREE
+    alert("You died...?")
+  }else{
+    rideTrain();
+  }
+    }
+  
+}
+          //conductor
+function conductor(){
+  alert("\"What in the world?!\" Lyn cries frantically. She turns to open the door to no avail.");
+  alert("Even the ever level-headed Taylor was visibly shaken. Before you three even have time to assess"+
+       " the situation, a man dressed in a suit with a cap engraved \"CONDUCTOR\" on its front appears before you all.")
+  alert("With a friendly smile he introduces himself and urges you three to take a seat while the train is in motion.");
+  alert("In the confusion you three do as he says and he leaves the passenger car. Taylor is the first to speak.")
+  alert("\"Something spooky is going on here,\" he says with a grin but a bead of sweat on his forehead exposes"+
+       " his cheerful facade.")
+  alert("Taking a look around the car, you see no other passengers or workers. The only sound is the rumble of wheels"+
+       " beneath your feet. Lyn, nearly in tears, opens her mouth to speak when the lights go out and you\'re "+
+       "left in complete darkness. As your eyes adjust, a shadowy figure made of black, whispy smoke moves across the car."+
+        " Lyn lets out a piercing scream and runs off. Just as you jolt up to follow in suit, the lights flicker back on.");
+  alert("The shadow had disappeared. Racing with adrenalin, you realize in despair that you hadn\'t noticed where Lyn had bolted off to in"+
+       " the confusion. Neither had Taylor. Splitting up, you search one of the adjoining cars while he "+
+        "looks through the other.")
+  alert("Stumbling into the next coach, a horrifying sight lays out before you. The conductor's lifeless body"+
+       " is sprawled out in the aisle between seats, an axe lodged deeply in his back. Blood pools around him, bright"+
+       " red and fresh. Frantically you call Taylor over.");
+  alert("Although you are too stunned to say a word, Taylor's eyes narrow in thought.\"Looks like we're not"+
+       " alone on this train.\" He mutters. \"...We need to find Lyn. Before whoever did THIS does.\"");
+  alert("Taylor turns to you and asks if you two should head to the engine room typically at the front of a train,"+
+       " or the sleeper cars typically in the back.")
+  search();
+}
+
+                                    //prompt to search the sleeper car or the engine room
+
+
+function search(){
+  var searchSorE = prompt("Search the \'engine room\' or the \'sleeper cars\'", "engine room or sleeper cars");
+  if(searchSorE == "engine room"){
+    engineRoom();
+  }else if(searchSorE == "sleeper cars"){
+    sleeperCars();
+  }else{
+    search();
+  }
+  
+}
+                                      //engine room
+function engineRoom(){
+  alert("You suggest the engine room and quickly head off with Taylor.");
+  alert("Finding your way to the front of the train, you manage to make your way to the engine room."+
+       " Mysteriously, the train became still upon entering. A door on the other side of the car swung open."+
+       " Past the door you could see the outside world. The fog had cleared and Taylor's car was in plain sight.")
+  alert("\"This is...our chance!\" Taylor beams. \"C\'mon, "+ name+"! Let\'s get off this thing!\"");
+  
+  ERchoice();
+}
+                                  //GLOBAL HALLWAY OBJECT
+  window.hallwayTrue = "closed";
+                                        //engine room decision.
+function ERchoice(){
+  var ERend = prompt("\'leave\' with Taylor or \'stay\' and search for Lyn?", "leave or stay");
+  
+  if(ERend == "leave"){
+    alert("You didn't want to chance staying on this train any longer. Following behind Taylor, the two of you"+
+         " step through the exit. The door eerily closes and the train slowly begins to depart once again."+
+         " As it chugs away, the distant sound of pained screams echo. Without looking behind, you and Taylor"+
+         " walk back to his car in silence.");
+    alert("Ending: Far Too Young to Die");//ENDING FAR TOO YOUNG TO DIE
+  }else if(ERend == "stay"){
+    alert("Your screaming conscience wouldn\'t allow you to so easily leave Lyn behind. You turn to Taylor"+
+         " and explain that you couldn\'t leave without Lyn.");
+    alert("\"Are you kidding me?!\" Taylor furiously exclaims. \"This could be our only chance to escape this crazy"+
+         " place and you\'re choosing not to?!\"");
+    alert("Just as he says this, the exit slams shut and the train continues moving once again.");
+    alert("Taylor looks at you in accusation as if your hesitation caused this loss, then shakes his head in disgust."+
+          " He leaves the engine room in silent frustration. As you follow behind, you notice a lighter on the floor"+
+         " and reach to pick it up.");
+    alert("Obtained a lighter.")
+    alert("You could sense a hint of hostility from Taylor and decide to stay silent as the two of you walk to the back of"+
+         " the train. Making your way down the train cars, the lights suddenly go off. Dim moonlight peeks in"+
+         " through the windows on either side of he car. The same disfigured shadow from earlier appears and without"+
+         " a moment to lose, you and Taylor immediately sprint off.")
+         //engine room to hallway
+    hallwayTrue = "open";
+    hallway();
+      }else{
+    ERchoice();
+            }
+}
+    
+                                            //Search sleeper cars
+function sleeperCars(){
+  alert("You suggest the sleeper cars and make your way to the back of the train.");
+  alert("A sickening stench becomes stronger the further along you go. Eventually you come to"+
+       " the train cars accommodated with beds on either side. As you and Taylor"+
+       " search ever deeper, you discover the source of the smell.");
+  alert("Opening up the door to the next car, the entire interior is splattered with blood."+
+        " Before you have a chance to say a word, the train lights go out once again.");
+  alert("The dim moonlight peeks through the window just long enough for you and Taylor to see"+
+       " the same sinister shadow from earlier. Instantly you both turn and sprint.")
+  hallwayTrue = "closed";
+  hallway();
+  }
+
+                                            //hallway switches
+
+function hallway(){
+  switch(hallwayTrue){
+                                  //Engine room case!
+    case "open":
+      alert("Stumbling through the cars in the pitch black, your foot gets caught on the carpet and gravity does the rest."+
+           " Taylor races ahead without stopping to help. Scrambling back up, you feel your way down the car and realize"+
+            " there are closets lining the walls on both sides of you. Throwing yourself into one"+
+            ", you shut the door into hiding.");
+      alert("You calm your racing heart as best as you can and place a hand over your mouth to silence your heavy breathing.");
+      alert("The sound of feet dragging against the floor outside of the closet causes you to hold your breath in"+
+            " terror.")
+      alert("The feet stop momentarily directly in front of your closet. After what feels like an eternity,"+
+           " they begin shuffling once again and exit the car. Reaching out to open the door, you feel some sort of"+
+            " engraving inside the closet. You remember the lighter inside of you pocket and pull it out, flicking"+
+            " it on, you see strange lettering.");
+                        //global variable royalty
+      var royalty = prompt("....nly....");
+      if((royalty == "lyn")||(royalty == "Lyn")){
+        alert("'nly'...the letters seemed to be a simple anagram. It couldn't be...Lyn?");
+        alert("Taking a breath, you cautiously open the closet door and step out. The lights had turned back on.")
+        alert("On the floor sat a cap with the word 'CONDUCTOR' engraved on the front. But...the conductor"+
+             " was supposed to be dead, right? So then why was his hat here?");
+      }else{
+      alert("You couldn't make sense of the letters but you couldn't sit around forever.");
+      alert("Taking a breath, you cautiously open the closet door and step out. The lights had turned back on.")
+      alert("On the floor sat a cap with the word 'CONDUCTOR' engraved on the front. But...the conductor"+
+             " was supposed to be dead, right? So then why was his hat here?");
+      }
+      TorL();
+      break;
+                                  //Sleeper car case!
+    case "closed":
+      alert("Stumbling through the cars in the pitch black, you realize Taylor is no longer by your side."+
+           " As you feel your way down the car, you realize there are closets on both sides of you and"+
+            " throw yourself into one, shutting the door into hiding.");
+      alert("You calm your racing heart as best as you can and place a hand over your mouth to silence your heavy breathing.");
+      alert("The sound of feet dragging against the floor outside of the closet causes you to hold your breath in"+
+            " terror.")
+      alert("The feet stop momentarily directly in front of your closet. After what feels like an eternity,"+
+           " they begin shuffling once again and exit the car. Taking a breath, you cautiously open the closet door"+
+           " and step out. The lights had turned back on.");
+      alert("On the floor sat a cap with the word 'CONDUCTOR' engraved on the front. But...the conductor"+
+             " was supposed to be dead, right? So then why was his hat here?");
+      TorL();
+      break;
+      
+  }
+  
+    }
+                  //Search for Taylor or Lyn?
+function TorL(){
+var searchTorL = prompt("Search for Taylor or Lyn?");
+  if(searchTorL == "Taylor"){
+    searchTaylor();
+  }else if(searchTorL=="Lyn"){
+    searchLyn();
+  }else{
+    TorL();
+  }
+}
+                //Search for Taylor
+function searchTaylor(){
+  alert("You decide to search for Taylor.");
+  alert("Walking through the cars, you grow more and more anxious on your own. As you find your way back to the"+
+       " passenger car, a door suddenly flies open revealing the outside world. The train sat completely motionless."+
+       " Past the fog, you could see your house just beyond the door!");
+  escapeTaylor();
+}
+function escapeTaylor(){
+  var escape = prompt("Get off the train?", "yes or no");
+  if(escape=="yes"){
+    alert("You race off the train without a moment's thought. Just as you step off, your house disappears"+
+         " into the fog. A black smoke mingles with the fog and slowly takes the shape of a disfigured monster."+
+         " The shadow lurches for you and your world turns dark.");
+    alert("Ending: House of Memories"); //ENDING HOUSE OF MEMORIES
+    alert("You died.")
+  }else if(escape=="no"){
+    alert("You would never forgive yourself if you left your friends behind. With a sigh, you continue your search.");
+    alert("A piercing shriek cuts through the air and you pause for only a moment before racing towards the cry.")
+    Lynfound();
+  }else{
+    escapeTaylor();
+  }
+}
+                //Search for Lyn
+function searchLyn(){
+  alert("You decide to search for Lyn.");
+  alert("A piercing shriek cuts through the air and you pause for only a moment before racing towards the cry.");
+  Lynfound();
+}
+                    //Find Lyn
+function Lynfound(){
+  alert("After speeding through the cars, you stumble into one and see Lyn before you. In her hands was the"+
+       " same axe that had been lodged in the conductor's back! Blood spatters stained her clothing and her eyes"+
+       " were wild with terror.");
+  alert("Before either of you can speak, Taylor enters the car as well. Looking over Lyn, his eyes widen in shock.")
+  alert("\"What in the world is going on here?!\" Taylor's shock quickly turns to hostility.");
+  alert("\"I-it's not what you think!\" Lyn stutters in defense. Her small frame was trembling. \"I was attacked!\"");
+  alert("\"Liar! You can't hide it! You used that axe to kill the conductor, didn't you!?\" Taylor points an"+
+       " accusing finger at Lyn who shrinks back in horror.")
+  alert("\""+name+"....You believe me, right?\" Lyn questions weakly. \"Please! Please I'm telling the truth! I was"+
+       " attacked by that shadow thing from earlier! I found this axe just now, I don't know anything about the"+
+       " conductor, I swear!\"");
+  chooseLorT();
+}
+                //side with Taylor or Lyn
+function chooseLorT(){
+  var chooseTorL = prompt("Side with Taylor or Lyn?", "Taylor or Lyn");
+  if(chooseTorL=="Taylor"){
+    alert("You silently move towards Taylor and the look on Lyn's face shows how heartbroken she is.");
+    alert("The side of Taylor's lips turn upwards and suddenly a pain shoots through your stomach. Looking down"+
+         " you see the hilt of a knife lodged deep in you. Lyn screams out and you're on the floor before you realize it."+
+         " The last thing you see is Taylor grinning wickedly as he makes his way towards Lyn.");
+    alert("Ending: Death of a Bachelor"); //ENDING DEATH OF A BACHELOR
+    alert("You died.")
+  }else if(chooseTorL=="Lyn"){
+    alert("Taylor had tried to turn you against Lyn, but instead you move towards her side.");
+    alert("At the sight of this, he becomes furious.")
+    alert("\"...Fine. Fine, fine, fine, fine, fine, fine! You want to side with the killer? Fine, fine, fine!"+
+         " You can die first then!");
+    alert("Taylor suddenly charges you and knocks you to the floor. He reaches to pull a knife out of his pocket.")
+    nobodyPutsBabyInTheCorner();
+  }else{
+    chooseLorT();
+  }
+}
+                  //Fight Taylor or Run
+function nobodyPutsBabyInTheCorner(){
+switch(hallwayTrue){
+ case "closed":  //Didn't pick up lighter endings
+  var fightOrDie = prompt("Fight against Taylor or away with Lyn?", "fight or run");
+  if(fightOrDie=="fight"){
+    alert("You quickly get back to your feet then turn and smash your fist directly into Taylor's face.");
+    alert("He recovers faster than expected then turns his knife on you and guts you open.");
+    alert("You crumble to the floor in searing pain. You marvel at how much blood you have before blacking out.")
+    alert("Ending: Let's Kill Tonight"); //ENDING LET'S KILL TONIGHT
+    alert("You died.")
+  }else if(fightOrDie=="run"){
+    alert("Scrambling to your feet, you grab Lyn by the arm and run away.");
+    alert("Taylor manages to catch up and snags you by the shirt. He raises his arm to stab the knife into you."+
+         " Before he has the chance to make a scratch, Lyn hits him on the shoulder with the butt of the axe and he stumbles back in pain"+
+         " just long enough for you two to get away.");
+    alert("Just as you and Lyn make it to the passenger car, one of the side doors flies open. The lights flicker off leaving"+
+         " you and Lyn in the dark. The train sat motionless and all was eerily still when Taylor staggers into the car."+
+         " He holds his shoulder in pain, a blood curdling look of rage on his face. Around him you notice wisps of black"+
+         " smoke enveloping him.")
+    alert("\"Let's go!\" Lyn cries. The two of you jump off the train just as Taylor lunges towards you both. The door slams"+
+         " shut between you three, trapping him on the train. Like a mad man he screams and tries to break down the door as"+
+         " the train begins to roll away.");
+    alert("Without a word, you and Lyn collapse onto the ground, shaken to the core.")
+    alert("Ending: One of THOSE Nights"); //ENDING ONE OF THOSE NIGHTS
+    }else{}
+    break;
+  case "open": //Picked up lighter endings
+    fightOrDie = prompt("Fight against Taylor or run away with Lyn","fight or run");
+    if(fightOrDie=="fight"){
+    alert("You quickly get back to your feet then turn and smash your fist directly into Taylor's face.");
+    alert("He recovers faster than expected then turns his knife on you and guts you open.");
+    alert("You crumble to the floor in searing pain. You marvel at how much blood you have before blacking out.")
+    alert("Ending: Let's Kill Tonight"); //ENDING LET'S KILL TONIGHT
+    alert("You died.")
+    }else if(fightOrDie=="run"){
+    alert("Scrambling to your feet, you grab Lyn by the arm and run away.");
+    alert("Taylor manages to catch up and snags you by the shirt. He raises his arm to stab the knife into you."+
+         " Before he has the chance to make a scratch, Lyn hits him on the shoulder with the butt of the axe and he stumbles back in pain"+
+         " just long enough for you two to get away.");
+    alert("Just as you and Lyn make it to the passenger car, one of the side doors flies open. The train had stopped moving and the lights flicker off leaving"+
+         " you and Lyn in the dark. You remember the ligher in your pocket and flick it open. The passenger room now filled"+
+         " with light revealed faces of tortured souls lining the walls. Each one gnashing its terrible mouth menacingly"+
+         " at you and Lyn.");
+    alert("Lyn cries out in terror just as Taylor staggers into the car, holding his shoulder in pain. The look "+
+         "of pure bloodlust on his face made your blood freeze. Around him you notice wisps of black smoke enveloping him.");
+    alert("He charges you both with an animalistic growl, knocking Lyn to the floor and swinging his knife wildly at you."+
+         " Taylor digs the blade into your shoulder and you scream in agony. Lyn once again scrapes up the axe and knocks him"+
+         " over with the butt of it.");
+    alert("Suddenly, the conductor scrambles into the car. Before anyone can react, he moves towards Taylor and the black"+
+         " smoke begins to separate from him. Taylor cries out in pain and swings his knife aimlessly. Once the smoke"+
+         " completely leaves his body, Taylor collapses to the floor. The smoke begins to reform over his body into a "+
+         " deformed figure.");
+    alert("Acting on instinct, you and Lyn grab Taylor's body and jump off the train just as the shadowy figure lunges at you all.");
+    alert("The conductor holds back the monster just long enough for you all to escape. The door slams shut behind you all and"+
+         " the train begins to roll away.")
+    alert("You and Lyn look at each other over Taylor's unconscious body, still shaking with adrenalin.");
+    alert("True Ending: The End of All Things"); //TRUE ENDING
+  }
+    else{
+    nobodyPutsBabyInTheCorner();
+  }
+}
+}
+
+</script>
+</html>
